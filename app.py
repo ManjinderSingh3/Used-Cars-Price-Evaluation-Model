@@ -535,7 +535,7 @@ def predict_price(ml_model, manufacturer_pp, model_pp, purchase_year_pp, fuel_ty
 
     data = prediction_df.to_numpy()
 
-    rf_Model = pickle.load(open('Random_Forest_Model.pkl', 'rb'))
+    rf_Model = pickle.load(open('Random_Forest_Model1.pkl', 'rb'))
     price = rf_Model.predict(data)
 
     return price
@@ -692,7 +692,7 @@ y_label = after_label_encoding[output_col]
     [Input(component_id='ml_models_dropdown', component_property='value')]
 )
 def feature_importance(selected_model):
-    rf_Model = pickle.load(open('Random_Forest_Model.pkl', 'rb'))
+    rf_Model = pickle.load(open('Random_Forest_Model1.pkl', 'rb'))
     importances = rf_Model.feature_importances_
     features = x_features.columns
     x_values = list(features)

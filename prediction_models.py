@@ -10,7 +10,7 @@ import time
 
 before_label_encoding = read_csv_file(Path('Data', 'vehicle_final.csv'))
 after_label_encoding = read_csv_file(Path('Data', 'vehicle_final_le.csv'))
-rf_F_name = "Random_Forest_Model.pkl"
+rf_F_name = "Random_Forest_Model1.pkl"
 
 # MODEL:
 def random_forest_regressor(x: pd.DataFrame, y: pd.Series) -> Dict:
@@ -35,7 +35,7 @@ def random_forest_regressor(x: pd.DataFrame, y: pd.Series) -> Dict:
 
 
 def save_random_forest_regressor(rf_model):
-    pickle.dump(rf_model, open('Random_Forest_Model.pkl', 'wb'))
+    pickle.dump(rf_model, open('Random_Forest_Model1.pkl', 'wb'))
 
 
 def run_regression_models(x, y):
