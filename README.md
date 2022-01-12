@@ -82,10 +82,14 @@ While testing the model, I got R2_Score of 92.4%. So, to fix this 10% error rate
 - Select Ubuntu Server (latest version) as the Amazon Machine Image (AMI).
 - Select t2.micro instance type, which is free tier eligible. 
 - Configure Security Groups by adding inbound rules.
-- - Click on Inbound Rules -> Edit Inbound Rules.
-- - For Port 22, allow it to everyone's IP address as the source. As this application is not having such security concerns so I have allowed it for everyone. If you are dealing with some secured information than select My IP as the source. This ensures that only your IP can remotely connect to the EC2 instance.
+  - Click on Inbound Rules -> Edit Inbound Rules.
+  - For Port 22, allow it to everyone's IP address as the source. As this application is not having such security concerns so I have allowed it for everyone. If you are dealing with some secured information than select My IP as the source. This ensures that only your IP can remotely connect to the EC2 instance.
 - Click Review and Launch and Launch the instance.
+- For connecting the instance securely, create a new key pair and download the private key file. Keep this file safe as this will enable anyone to connect the EC2 instance. For Mac uses `.pem` file will directly work, however, for Windows users `.pem` file needs to be converted to `.ppk` file 
 
+## Connect to the EC2 Instance
+- Right-click on the running EC2 instance on the AWS management console and click connect.
+- Follow the instructions to connect to the EC2 instance remotely from your command line.
 
 # Contact 📞
 
