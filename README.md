@@ -75,5 +75,12 @@ While testing the model, I got R2_Score of 92.4%. So, to fix this 10% error rate
   ```
 - Open the localhost url provided after running `app.py` and now you can use the project locally in your web browser.
 
-# Deployment on AWS 
+# Deployment on AWS ☁️
+
+
+
+# Contact 📞
+
+#### If you have any doubt or want to contribute to this project feel free to email me or drop your message on [LinkedIn](https://www.linkedin.com/in/manjinder-singh-a23aa3149/)
+
 
