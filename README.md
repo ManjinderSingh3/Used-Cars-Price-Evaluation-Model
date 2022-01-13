@@ -91,6 +91,26 @@ While testing the model, I got R2_Score of 92.4%. So, to fix this 10% error rate
 - Right-click on the running EC2 instance on the AWS management console and click connect.
 - Follow the instructions to connect to the EC2 instance remotely from your command line.
 
+## Copy Code to EC2 Instance
+In order to get the code on EC2 instance we have two basic ways:
+a. Clone the code from Github repository
+b. Copy the Code to AWS S3 bucket from your local system and than copy the project directory from AWS S3 to the EC2 instance.
+
+### a. Clone the code from Github repository
+- Coneecting to EC2 instance from local system as per steps mentioned above.
+- Clone the complete project with `git clone https://github.com/ManjinderSingh3/Used-Cars-Price-Evaluation-Model.git` on EC2 instance.
+- `cd <project-directory>`
+- Install pip3 and required dependencies using the below commands.
+  `sudo apt-get update
+
+   sudo apt-get -y install python3-pip
+
+   pip3 install -r requirements.txt 
+   `
+- Run the `app.py` file using below mentioned command
+  `python3 app.py`
+- You will now be able to access the  web app with https:EC2-IP:PORT. (Port number which I have used is 8080)
+
 # Contact 📞
 
 #### If you have any doubt or want to contribute to this project feel free to email me or drop your message on [LinkedIn](https://www.linkedin.com/in/manjinder-singh-a23aa3149/)
