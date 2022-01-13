@@ -96,10 +96,43 @@ In order to get the code on EC2 instance we have two basic ways:
 a. Clone the code from Github repository
 b. Copy the Code to AWS S3 bucket from your local system and than copy the project directory from AWS S3 to the EC2 instance.
 
-### a. Clone the code from Github repository
+### a. Clone the Project from Github repository
 - Coneecting to EC2 instance from local system as per steps mentioned above.
 - Clone the complete project with `git clone https://github.com/ManjinderSingh3/Used-Cars-Price-Evaluation-Model.git` on EC2 instance.
 - `cd <project-directory>`
+- Install pip3 and required dependencies using the below commands.
+  ```
+  sudo apt-get update
+
+  sudo apt-get -y install python3-pip
+
+  pip3 install -r requirements.txt 
+  ```
+- Run the `app.py` file using below mentioned command
+  ```
+  python3 app.py
+  ```
+- You will now be able to access the  web app with https:EC2-IP:PORT. (Port number which I have used is 8080)
+
+### b. Copy Project to S3 Bucket
+- Install AWS CLI. It is used to interact with the AWS console from command line. Follow the instructions [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- Follow instructions [here](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/) to get an AWS access key.
+- Configure AWS CLI by typing `aws configure` from your command line/ terminal.
+- Provide the Access Key Id, Access Key, and Default Region Name.
+- Now create an AWS S3 Bucket to store the project using below mentioned command.
+  ```
+  aws s3 mb s3://bucket-name
+  ```
+- Copy files from your local project directory to S3 bucket using below mentioned command.
+  ```
+  aws s3 cp <your directory path> s3://<your bucket name> --recursive
+  ```
+- Now the project is copied to S3 bucket. We have to now provide S3 access from EC2 instance. To enable access follow the instructions [here](https://aws.amazon.com/premiumsupport/knowledge-center/ec2-instance-access-s3-bucket/)
+- Copy the project directory from AWS S3 to the EC2 instance using below mentioned command.
+  ```
+  aws s3 sync <local directory path> s3://source-bucket-name
+  ```
+- Switch the directory in which project is copied using `cd <project-directory>`.
 - Install pip3 and required dependencies using the below commands.
   ```
   sudo apt-get update
