@@ -101,14 +101,17 @@ b. Copy the Code to AWS S3 bucket from your local system and than copy the proje
 - Clone the complete project with `git clone https://github.com/ManjinderSingh3/Used-Cars-Price-Evaluation-Model.git` on EC2 instance.
 - `cd <project-directory>`
 - Install pip3 and required dependencies using the below commands.
-  ```sudo apt-get update
+  ```
+  sudo apt-get update
 
-   sudo apt-get -y install python3-pip
+  sudo apt-get -y install python3-pip
 
-   pip3 install -r requirements.txt 
-   ```
+  pip3 install -r requirements.txt 
+  ```
 - Run the `app.py` file using below mentioned command
-  ```python3 app.py```
+  ```
+  python3 app.py
+  ```
 - You will now be able to access the  web app with https:EC2-IP:PORT. (Port number which I have used is 8080)
 
 # Contact 📞
