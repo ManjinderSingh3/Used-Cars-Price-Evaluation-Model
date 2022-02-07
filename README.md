@@ -37,7 +37,7 @@ This dataset includes the record of every used vehicle within the United States.
 ![image](https://github.com/ManjinderSingh3/Used-Cars-Price-Evaluation-Model/blob/master/results/8.png)
 
 # Machine Learning Model 💻
-There are several Machine learning algorithms to perform regression tasks such as linear regression, SVM Regressor, Random Forest regressor, etc. After analysing features present in the dataset and comparing results of various regression models, I have found that Random Forest Regressor model has provided best results with an R2_Score of 92.4
+There are several Machine learning algorithms to perform regression tasks such as linear regression, SVM Regressor, Random Forest regressor, etc. After analysing features present in the dataset and comparing results of various regression models, I have found that Random Forest Regressor model has provided best results with an **R2_Score of 92.4**
 
 ## Random Forest Regressor
 Some important parameters while building the regressor are:
